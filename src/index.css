@@ -1,0 +1,439 @@
+:root {
+  /* Palette: Dark-oriented, calm, professional */
+  --bg-color: #0f1115; 
+  --text-main: #e2e8f0; 
+  --text-muted: #94a3b8; 
+  --accent-color: #3b82f6; 
+  --border-color: #1e293b;
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* CSS Reset Modern */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Modifikasi app-container */
+.app-container {
+  width: 100%; /* Tambahkan ini agar kontainer merentang penuh */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Sesuaikan padding agar lebih rapi */
+}
+
+/* Layout System */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%; /* Paksa root mengambil lebar penuh layar */
+  text-align: left; /* Timpa jika ada bawaan text-align: center dari Vite */
+}
+
+main {
+  flex: 1; /* Mendorong footer ke bawah */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Tambahan agar merentang penuh ke samping */
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.logo-image {
+  height: 100px; /* Ubah angka ini (coba 50px, 60px, atau 70px) sampai proporsinya pas */
+  width: 100px;  /* Karena persegi, kunci lebarnya agar seimbang */
+  object-fit: contain;
+}
+
+.navbar-logo {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  letter-spacing: -0.5px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.navbar-links a:hover {
+  color: var(--text-main);
+}
+
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   HERO SECTION (HOME)
+   ========================================= */
+.hero-section {
+  padding: 6rem 0 4rem; /* Jarak lega di atas dan bawah */
+  max-width: 800px; /* Batasi lebar teks agar nyaman dibaca */
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  letter-spacing: -1px; /* Memberikan kesan modern/teknis */
+  margin-bottom: 1.5rem;
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* =========================================
+   BUTTONS COMPONENT
+   ========================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: 1px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-muted);
+  color: #ffffff;
+}
+
+/* =========================================
+   MAIN SECTIONS (HOME)
+   ========================================= */
+.section-spacing {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  color: var(--text-muted);
+  max-width: 700px;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.tech-list {
+  color: var(--text-muted);
+  margin-left: 1.25rem;
+  line-height: 2;
+  font-size: 1rem;
+}
+
+.tech-list strong {
+  color: var(--text-main);
+}
+
+/* =========================================
+   PROJECT CARD
+   ========================================= */
+.project-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2.5rem;
+  background-color: #13161c;
+  transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent-color);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.project-card-header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.project-badge {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--accent-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-tech {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+}
+
+.project-desc {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+/* =========================================
+   CASE STUDY PAGE
+   ========================================= */
+.case-study-container {
+  max-width: 800px; /* Lebar optimal untuk membaca teks panjang */
+  margin: 0 auto;
+}
+
+.cs-header {
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cs-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cs-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+.cs-section {
+  margin-bottom: 3.5rem;
+}
+
+.cs-section h2 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  letter-spacing: -0.5px;
+}
+
+.cs-section p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: var(--text-main);
+}
+
+.cs-section ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cs-section li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   PIPELINE DIAGRAM
+   ========================================= */
+.pipeline-diagram {
+  background-color: #13161c;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-mono);
+}
+
+.pipeline-step {
+  background-color: #1e293b;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.pipeline-step span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.pipeline-step.highlight {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.pipeline-arrow {
+  color: var(--text-muted);
+  padding: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+/* =========================================
+   PHASE 5: RESPONSIVE DESIGN (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+  /* 1. Container & Layout */
+  .app-container {
+    padding: 0 1.25rem; /* Kurangi padding samping di HP */
+  }
+
+  /* 2. Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem 0;
+  }
+
+  /* 3. Hero Section */
+  .hero-section {
+    padding: 3rem 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem; /* Perkecil ukuran teks judul utama */
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column; /* Tumpuk tombol ke bawah */
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%; /* Tombol melebar penuh (mudah ditekan jempol) */
+  }
+
+  /* 4. Sections & Project Card */
+  .section-spacing {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem; /* Kurangi ruang kosong di dalam kartu */
+  }
+
+  .project-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  /* 5. Case Study Page */
+  .cs-title {
+    font-size: 2.25rem;
+  }
+
+  .cs-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .cs-section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .pipeline-diagram {
+    padding: 1.5rem 1rem;
+  }
+}
