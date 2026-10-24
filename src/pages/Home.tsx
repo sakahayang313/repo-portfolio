@@ -193,9 +193,10 @@ export default function Home() {
           operasional infrastruktur IT secara end-to-end.
         </p>
         <div className="hero-actions" style={{ marginTop: "1.5rem" }}>
-          <a href="#" className="btn btn-outline">
-            Detail Dokumentasi (Segera Hadir)
-          </a>
+          {/* GANTI BARIS INI */}
+          <Link to="/infrastructure" className="btn btn-outline">
+            Lihat Dokumentasi Lapangan
+          </Link>
         </div>
       </section>
 
