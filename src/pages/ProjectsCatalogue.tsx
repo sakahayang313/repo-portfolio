@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 const allProjects = [
   {
     id: 10,
-    title: "PRORP Translator AI",
-    category: "Desktop / AI",
-    tech: "C++ • Qt6 • Llama-3",
-    desc: "Aplikasi penerjemah overlay untuk skenario Roleplay dengan injeksi auto-typing dan sistem lisensi.",
-    link: "/projects/prorp",
+    title: "PRORP Translator v3.0",
+    category: "Desktop App",
+    tech: "C++ • Qt 6 • Tesseract OCR • Groq API",
+    desc: "A desktop translation overlay built for GTA, RDR2, Roblox and other. It combines real-time OCR, contextual AI translation, and automatic text input without disrupting game immersion.",
+    link: "/projects/prorp-translator",
   },
   {
     id: 13,
-    title: "ERP & POS Malaysia",
-    category: "Enterprise",
-    tech: "[TECH_STACK]",
-    desc: "Sistem Enterprise Resource Planning dan Point of Sales untuk bisnis di Malaysia.",
+    title: "Ranch ERP & Financial System - RedM",
+    category: "Enterprise Web App",
+    tech: "Google Apps Script • Google Sheets • Bootstrap 5",
+    desc: "A comprehensive ranch management system developed for a Malaysian client. The platform streamlines employee activity tracking, livestock inventory, production cycles, payroll processing, and centralized real-time financial reporting.",
     link: "/projects/erp-malaysia",
   },
   {

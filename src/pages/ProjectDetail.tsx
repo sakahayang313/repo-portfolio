@@ -18,12 +18,18 @@ export default function ProjectDetail() {
   // Nanti data ini bisa digabung ke satu file khusus agar lebih rapi
   const projectDB: Record<string, ProjectData> = {
     "erp-malaysia": {
-      title: "ERP & POS System (Malaysia)",
-      category: "Enterprise",
-      tech: "React • Node.js • PostgreSQL",
-      description: "Sistem Enterprise Resource Planning dan Point of Sales yang dirancang untuk klien di Malaysia. Memfasilitasi manajemen stok lintas cabang, kasir multi-mata uang, dan pelaporan keuangan real-time.",
-      features: ["Multi-branch Inventory", "Real-time Analytics", "Role-based Access Control"]
-    },
+    title: "Ranch ERP & Financial System - RedM",
+    category: "Enterprise Web App",
+    tech: "Google Apps Script • Google Sheets • Bootstrap 5 ",
+    description: "A custom-tailored Enterprise Resource Planning (ERP) and Point of Sales (POS) ecosystem developed for a Malaysian client in the RedM roleplay environment. Built on a serverless Google Cloud infrastructure, the system automates employee activity tracking, dynamic Bill of Materials (BOM) for livestock and production, payroll management, and real-time financial reporting while actively preventing fraud.",
+    features: [
+      "Role-Based Access Control (RBAC): 5-tier access hierarchy (Owner, Admin, Manager, Staff) with privacy toggles to protect financial data.",
+      "Smart Point of Sales (POS): Automated checkout that instantly reduces BOM stock, updates cash balance, and distributes employee incentives.",
+      "HR & Automated Payroll: Tracks attendance, calculates role-based incentives, and automates salary payments directly integrated with the Finance Ledger.",
+      "Executive Financial Ledger: Centralized digital cash book with real-time Profit & Loss (P&L) reporting calculating Revenue, COGS, Opex, and Net Profit.",
+      "Audit & KPI Red Flag: Automated anomaly detection system tracking inventory shrinkage, unusual purchase mark-ups, and productivity issues."
+    ]
+  },
     "question-analysis": {
       title: "Question Item Analysis",
       category: "EdTech",

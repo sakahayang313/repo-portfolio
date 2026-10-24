@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import prorpInGame from "../assets/projects/prorp/prorp-ingame.webp"; // Sesuaikan ekstensi jika pakai .jpg atau .png
 
 export default function Home() {
   useEffect(() => {
@@ -74,9 +75,9 @@ export default function Home() {
               C++ • Qt 6 • Tesseract OCR • Groq API
             </p>
             <p className="project-desc" style={{ marginBottom: "2rem" }}>
-              A desktop translation overlay built for GTA and RedM roleplay. It
-              combines real-time OCR, contextual AI translation, and automatic
-              text input without disrupting game immersion.
+              A desktop translation overlay built for GTA, RDR2, Roblox and
+              other. It combines real-time OCR, contextual AI translation, and
+              automatic text input without disrupting game immersion.
             </p>
             <div style={{ marginTop: "auto" }}>
               <Link to="/projects/prorp" className="btn btn-primary">
@@ -88,7 +89,7 @@ export default function Home() {
           <div className="featured-project-visual">
             {/* PLACEHOLDER: Ganti src ini dengan gambar in-game RedM/GTA Anda nanti */}
             <img
-              src="https://placehold.co/800x600/1e232b/3b82f6?text=GTA/RedM+In-Game\nTranslation+Overlay"
+              src={prorpInGame}
               alt="PRORP Translator overlay active during a GTA roleplay session"
             />
           </div>
@@ -99,17 +100,20 @@ export default function Home() {
       <section id="projects" className="section-spacing">
         <h2 className="section-title">Selected Projects</h2>
         <div className="projects-grid">
-          {/* Proyek 1: ERP & POS Malaysia */}
+          {/* Proyek 1 */}
           <div className="project-card">
             <div className="project-card-header">
-              <h3>ERP & POS System</h3>
-              <span className="project-badge">Enterprise</span>
+              <h3>Ranch ERP & Financial System - Redm</h3>
+              <span className="project-badge">Enterprise Web App</span>
             </div>
-            <p className="project-tech">[TECH_STACK, Cth: React • Node.js]</p>
+            <p className="project-tech">
+              Google Apps Script • Google Sheets • Bootstrap 5
+            </p>
             <p className="project-desc">
-              Sistem Enterprise Resource Planning dan Point of Sales yang
-              dirancang untuk [SEBUTKAN_BIDANG_BISNIS] di Malaysia.
-              [JELASKAN_FUNGSI_UTAMA_ATAU_PROBLEM_YANG_DISELESAIKAN].
+              A comprehensive ranch management system developed for a Malaysian
+              client. The platform streamlines employee activity tracking,
+              livestock inventory, production cycles, payroll processing, and
+              centralized real-time financial reporting.
             </p>
             <Link to="/projects/erp-malaysia" className="btn btn-outline">
               Baca Case Study
