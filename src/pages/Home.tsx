@@ -15,16 +15,16 @@ export default function Home() {
           <span className="text-accent">practical software products.</span>
         </h1>
         <p className="hero-subtitle">
-          Saya Naufal, independen developer di balik QaritsaDEV. Saya membangun
-          aplikasi desktop, bot otomatisasi, dan sistem manajemen web dengan
-          pendekatan engineering yang pragmatis dan terukur.
+          I'm Naufal, the developer behind QaritsaDEV. I work on desktop
+          applications, automation tools, and web-based systems, with a focus on
+          solving real-world problems through software.
         </p>
         <div className="hero-actions">
           <a href="/#projects" className="btn btn-primary">
-            Lihat Projects
+            View Projects
           </a>
           <a href="/#contact" className="btn btn-outline">
-            Hubungi Saya
+            Get in Touch
           </a>
         </div>
       </section>
@@ -33,19 +33,24 @@ export default function Home() {
       <section id="technologies" className="section-spacing">
         <h2 className="section-title">Technologies</h2>
         <p className="section-description">
-          Stack teknologi yang secara aktif saya gunakan untuk membangun
-          software dalam fase production.
+          The tech stack I use to build and ship software.
         </p>
         <ul className="tech-list">
           <li>
-            <strong>Core Languages:</strong> C++, TypeScript, JavaScript, Python
+            <strong>Core Languages:</strong> C++, Python, JavaScript, TypeScript
+          </li>
+          <li>
+            <strong>Web Development:</strong> HTML, CSS, React, Vite, Node.js,
+            Laravel, Wordpress, Google Apps Script
           </li>
           <li>
             <strong>Desktop & Automation:</strong> Qt6, CMake, OpenCV, PyAutoGUI
           </li>
           <li>
-            <strong>Web & Cloud:</strong> React, Vite, Google Apps Script,
-            Bootstrap 5
+            <strong>Databases:</strong> PostgreSQL, MySQL
+          </li>
+          <li>
+            <strong>Tools & Workflow:</strong> Git, GitHub
           </li>
         </ul>
       </section>
@@ -53,21 +58,40 @@ export default function Home() {
       {/* 3. FEATURED PROJECT */}
       <section id="featured-project" className="section-spacing">
         <h2 className="section-title">Featured Project</h2>
-        <div className="project-card">
-          <div className="project-card-header">
-            <h3>PRORP Translator v3.0</h3>
-            <span className="project-badge">Desktop App</span>
+
+        <div className="featured-project-container">
+          <div className="featured-project-content">
+            <div
+              className="project-card-header"
+              style={{ marginBottom: "0.5rem" }}
+            >
+              <h3 style={{ fontSize: "1.5rem", margin: 0 }}>
+                PRORP Translator v3.0
+              </h3>
+              <span className="project-badge">Desktop App</span>
+            </div>
+            <p className="project-tech" style={{ marginBottom: "1.5rem" }}>
+              C++ • Qt 6 • Tesseract OCR • Groq API
+            </p>
+            <p className="project-desc" style={{ marginBottom: "2rem" }}>
+              A desktop translation overlay built for GTA and RedM roleplay. It
+              combines real-time OCR, contextual AI translation, and automatic
+              text input without disrupting game immersion.
+            </p>
+            <div style={{ marginTop: "auto" }}>
+              <Link to="/projects/prorp" className="btn btn-primary">
+                Read Engineering Case Study
+              </Link>
+            </div>
           </div>
-          <p className="project-tech">C++ • Qt6 • Tesseract OCR • Llama-3 AI</p>
-          <p className="project-desc">
-            Aplikasi penerjemah overlay untuk skenario Roleplay. Dibangun dengan
-            pipeline OCR real-time, injeksi auto-typing, koreksi konteks AI
-            Llama-3, dan sistem verifikasi lisensi HMAC terintegrasi Google Apps
-            Script.
-          </p>
-          <Link to="/projects/prorp" className="btn btn-outline">
-            Baca Engineering Case Study
-          </Link>
+
+          <div className="featured-project-visual">
+            {/* PLACEHOLDER: Ganti src ini dengan gambar in-game RedM/GTA Anda nanti */}
+            <img
+              src="https://placehold.co/800x600/1e232b/3b82f6?text=GTA/RedM+In-Game\nTranslation+Overlay"
+              alt="PRORP Translator overlay active during a GTA roleplay session"
+            />
+          </div>
         </div>
       </section>
 
